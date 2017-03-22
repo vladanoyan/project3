@@ -1,0 +1,201 @@
+/*
+ * Haytech Front End Model Core v.2.2.3
+ * Copyright 2016, Haytech Solutions
+ * Flexslider Custom Styles
+*/
+
+/*--- General Starts ---*/
+.flexslider {
+	margin: 0;
+}
+.flexslider .slides > li {
+  display: none;
+  -webkit-backface-visibility: visible;
+  useCSS: false;
+}
+.slider { 
+	margin: 50px 0 10px!important;
+
+}
+/*--- General Ends ---*/
+
+/*--- Main Slider Starts ---*/
+#slider .flex-viewport {
+	height: 100%;
+}
+#slider.flexslider .slides img {
+	width: 100%;
+	height: auto;
+}
+
+#slider {
+	height: calc(100% - 121px);
+	border:none;
+
+}
+#slider ul.slides,
+#slider ul.slides li {
+	height: 100%;
+}
+#slider figure {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	position: relative;
+}
+
+/*--- Main Slider Ends ---*/
+
+/*--- Thumbnails Start ---*/
+
+#thumbnails li {
+	margin-right: 5px;
+}
+#thumbnails img {
+	display: block; 
+	opacity: 0.7; 
+	cursor: pointer;
+}
+#thumbnails img:hover {
+	opacity: 1;
+}
+#thumbnails .flex-active-slide img {
+	opacity: 1; 
+	cursor: default;
+}
+#thumbnails .flex-viewport {
+	height: 100%;
+}
+
+#thumbnails.flexslider .slides img {
+	height: 100%;
+	width: auto;
+}
+
+.flexslider#thumbnails {
+	padding: 22px 21px 5px 21px;
+    height: 121px;
+    background: transparent;
+    padding-left: 0px;
+   
+	
+
+}
+.flexslider
+{
+	border:none;
+}
+#thumbnails ul.slides,
+#thumbnails ul.slides li {
+	height: 100%;
+}
+#thumbnails .lst-itm-dtl-thumb {
+	overflow: hidden;
+	height: 100%;
+}
+/*--- Thumbnails End ---*/
+
+/*--- Buttons Start ---*/
+.flex-direction-nav a.flex-next:before {
+    font-family: FontAwesome;
+    font-size: 60px;
+    content: "\f105";
+}
+.flex-direction-nav a.flex-prev:before {
+    font-family: FontAwesome;
+    font-size: 60px;
+    content: "\f104";
+}
+
+#thumbnails:hover .flex-direction-nav .flex-prev,
+#slider:hover .flex-direction-nav .flex-prev {
+	left: -1px!important;
+	height: 60px;
+}
+
+.flex-direction-nav a {
+	margin:-30px 0 0;
+}
+#thumbnails:hover .flex-direction-nav .flex-next,
+#slider:hover .flex-direction-nav .flex-next,
+#slider .flex-direction-nav a,
+#thumbnails .flex-direction-nav a {
+	height: 60px;
+}
+
+.flexslider:hover .flex-direction-nav .flex-prev {
+	left: 0px;
+}
+
+
+@media screen and (max-width: 860px) {
+	.flex-direction-nav .flex-prev {
+		left: 0px;
+	}
+}
+
+.fake-thumb {
+	border: 1px solid  #efeeee;
+	height: 94px;
+	width: 94px;
+}
+/*--- Buttons End ---*/
+
+/*--- Silder No Img ---*/
+.slider-no-img {
+	height: 100%;
+}
+.thumbnails-no-img {
+	display: none;
+}
+@media (min-width: 1200px) {
+	
+}
+
+/*-- Flexslider Model2 Starts --*/
+.flexslider-m2#thumbnails {
+	padding: 22px 0px 5px 0;
+}
+.flexslider-m2 .fake-thumb {
+	border: 2px solid  #ffffff;
+	height: 100px;
+	width: 100px;
+}
+/*-- Flexslider Model2 Ends --*/
+
+
+/*-------------------- Flexslider Model 3 Starts --------------------*/
+/*-------------------------------------------------------------------*/
+.flexslider-m3.flexslider:hover .flex-direction-nav .flex-next,
+.flexslider-m3 .flex-direction-nav .flex-next {
+	right: 15px;
+	opacity: 1;
+}
+.flexslider-m3.flexslider:hover .flex-direction-nav .flex-prev,
+.flexslider-m3 .flex-direction-nav .flex-prev {
+	left: 0px;
+	opacity: 1;
+}
+
+#thumbnails.flexslider-m3 .flex-direction-nav a {
+	width: 20px;
+	margin: -39px -16px 0 0;
+	padding-top: 5px;
+	background: #e7b329;
+}
+.flexslider-m3 .flex-direction-nav a:before,
+.flexslider-m3 .flex-direction-nav a:after {
+	color: #FFF;
+}
+.flexslider-m3.flexslider:hover .flex-direction-nav .flex-next
+#thumbnails.flexslider-m3:hover .flex-direction-nav .flex-prev,
+#slider:hover .flex-direction-nav .flex-prev {
+	left: -1px !important;
+}
+#thumbnails.flexslider-m3:hover .flex-direction-nav .flex-next,
+#thumbnails.flexslider-m3:hover .flex-direction-nav .flex-prev,
+#thumbnails.flexslider-m3 .flex-direction-nav a {
+	height: 95px;
+}
+/*-------------------- Flexslider Model 3 Ends --------------------*/
+/*-------------------------------------------------------------------*/
