@@ -42,7 +42,7 @@ ul li{
 
 body
 {
-background-color: #c5c2bd;
+background-color: #eae9e7;
   font-family: 'Open Sans', sans-serif;
   }
   /*toggle_icon*/
@@ -693,18 +693,123 @@ margin-bottom: 17px;
 /*-------------------- Footer Model2 Media Queries End --------------*/
 
 /*page1 CSS*/
-.Title_page1 {
-  border:1px solid #882c2f;
-  width: 632px;
-  margin:0 auto;
-  margin-bottom: 40px;
 
-}
 .page1
 {
   margin-bottom: 45px;
 }
+.Ceour
+{
+    margin-bottom: 0;
+    background-image: -moz-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 23px;
+    font-family: "Open Sans Light";
+}
+.Ceour1
+{
+  color: #fff;
+  font-size: 10px;
+  font-family: "Open Sans Light";
+}
+.Ceour1:hover,
+.Ceour1>p:hover
+{
+  color: #fff;
+  text-decoration: underline;
+}
+.Ceour2
+{
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-image: -moz-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
+  min-height: 60px;
+  width: 100%;
+  text-align: left;
+  padding-top: 10px;
+}
+.checkin
+{
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  margin-right: 8px;
+  margin-left: 10px;
+}
+@media (max-width: 660px) {
+  
+  .Ceour1{
+    display: block;
+    text-align: center;
+}
+  }
 
+  .Ceour4
+{
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-image: -moz-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    color: #fff;
+    font-size: 13px;
+    font-family: "Open Sans Light";
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.58);
+}
+.Ceour4>a
+{
+  color:white;
+}
+.white-list
+{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #fff;
+    padding: 25px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.58);
+}
+.Parce
+{
+  margin-bottom: 0;
+}
+.Parce>a
+{
+color:black;
+font-weight: 700;
+}
+.Parces
+{
+    color: black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 14px;
+    font-family: "Open Sans";
+    margin-bottom: 0;
+}
+.inform
+{
+  margin-top: 30px;
+}
+.inform>.row>.col-md-12>.col-md-6
+{
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.inform>.row>.col-md-12>.col-md-6>.white-list>h4
+{
+  text-transform: uppercase;
+}
 /*page2 CSS*/
 
 /*HEADER SEARCH*/
@@ -1015,6 +1120,7 @@ margin-bottom: 17px;
     box-shadow: 0 0 8px 0 rgba(0,0,0,0.4);
     top: 0;
     left:0;
+    width: 100%;
 
 }
 .listing-m3 .listing-item-img-container figcaption {
@@ -1187,7 +1293,7 @@ margin-bottom: 17px;
     background-image: -ms-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
     box-shadow: inset 0  0 1px 0 rgba(255, 255, 255, 0.75);
     color: #FFF;
-    width: 220px;
+    width: 206px;
     height: 33px;
     font-size: 14px;
     font-family: "Open Sans";
@@ -1215,10 +1321,31 @@ margin-bottom: 17px;
     background-color: #fff;
     border: 1px solid #dad6d6;
     border-radius: 13px;
-    padding: 3px 9px;
+    width: 191px;
     display: inline-block;
+    margin-bottom: 10px;
 
 }
+.jerome
+{
+  padding-top: 30px;
+}
+@media (max-width: 770px) {
+    .dpe-ges-block-m1-v1.btn-hover-container
+    {
+        vertical-align: text-top!important;
+    }
+    .logo-listing
+    {
+      vertical-align: text-top!important;
+    }
+  }
+@media (max-width: 1200px) {
+    .jerome
+    {
+        padding-top: 10px;
+    }
+  }
 /*--- Listing Item Contacts ---*/
 .listing-m3 div.listing-item-contacts[class*='col'] {
 
@@ -3022,14 +3149,15 @@ text-align: -webkit-center;
 }
 .backbtn
 {
-    border-radius: 4px;
-    border: none;
-    background: #882c2f;
-    color: white;
-    width: 180px;
-    height: 50px;
-    line-height: 40px;
+    border-radius: 16px;
+    border: 1px solid #000000;
+    background: #fff;
+    color: black;
+    width: 167px;
+    height: 48px;
+    line-height: 34px;
     margin-top: 20px;
+    font-weight: 700;
 }
 .backbtn:hover
 {
@@ -3121,7 +3249,7 @@ In this case we don't need it as there are max 4 tabs */
 .pager li>span.border-rounded {
     border-radius: 4px;
     border: none;
-    background: #882c2f;
+    background: #000000;
     color: white;
     width: 180px;
     height: 50px;
@@ -3131,7 +3259,7 @@ In this case we don't need it as there are max 4 tabs */
 }
 .form-wizard-m1 .pager li>a.border-rounded:hover
 {
-    background-color: #882c2f;
+    background-color: #000000;
     color: #fff;
     box-shadow: inset 0 0 0 #27496d, 0 4px 15px #193047;
 }
@@ -3564,13 +3692,6 @@ the drop down is opened above and the form tooltip  is under it */
 
 /*page5 CSS*/
 
-.Title_page5 {
-  border:1px solid #882c2f;
-  width: 600px;
-  margin:0 auto;
-  margin-bottom: 40px;
-
-}
 .page5
 {
   margin-bottom: 45px;
@@ -3725,12 +3846,6 @@ label.browse-m2.file {
 
 /*page6 CSS*/
 
-.Title_page6 {
-    border:1px solid #882c2f;
-    width: 503px;
-    margin:0 auto;
-    margin-bottom: 40px;
-}
 .page6
 {
     margin-bottom: 45px;
@@ -3778,19 +3893,11 @@ label.browse-m2.file {
 }
 .form-control
 {
-    border-radius: 10px;
+    border-radius: 0;
 }
 
 /*page7 CSS*/
 
-
-.Title_page7 {
-    border:1px solid #882c2f;
-    width: 503px;
-    margin:0 auto;
-    margin-bottom: 40px;
-
-}
 .page7
 {
     margin-bottom: 45px;
@@ -3798,14 +3905,6 @@ label.browse-m2.file {
 
 /*page8 CSS*/
 
-
-.Title_page8 {
-    border:1px solid #882c2f;
-    width: 303px;
-    margin:0 auto;
-    margin-bottom: 40px;
-
-}
 .page8
 {
     margin-bottom: 45px;
@@ -3815,13 +3914,6 @@ label.browse-m2.file {
 /*page9 CSS*/
 
 
-.Title_page9 {
-    border:1px solid #882c2f;
-    width: 186px;
-    margin:0 auto;
-    margin-bottom: 40px;
-
-}
 .page9
 {
     margin-bottom: 45px;
@@ -3994,11 +4086,11 @@ label.browse-m2.file {
     padding:15px;
     position: absolute;
     z-index: 999;
-    top: 30px;
+    top: 0;
     left: 50%;
     right: 50%;
     transform: translate(-50%,-50%);
-    width: 20%;
+    width: 27%;
     background-color: #fdfdfd;
     box-shadow: inset 0 0 50px 0 #ABABAB,0 0 21px 3px #242424;
     -webkit-box-shadow: inset 0 0 50px 0 #ABABAB,0 0 21px 3px #242424;
@@ -4066,9 +4158,6 @@ label.browse-m2.file {
     {
        font-size: 13px;
         display: inline-table;
-    }
-    .modalLog{
-        top:0;
     }
 }
 .modal-footer
