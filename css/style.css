@@ -42,7 +42,7 @@ ul li{
 
 body
 {
-background-color: #eae9e7;
+background-color: #f7f7f7;
   font-family: 'Open Sans', sans-serif;
   }
   /*toggle_icon*/
@@ -272,8 +272,24 @@ font-weight: 700 !important;
   overflow: hidden;
   max-height: 730px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-
-
+}
+.header-pic {
+    position: relative;
+    padding:0;
+    background: url(../images/pic.png) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    text-align: center;
+}
+.header-pic>h1
+{
+    color: #FFF;
+    padding: 250px 0 100px;
+    font-size: 60px;
+    font-family: "Open Sans Light";
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
 }
 
 .mainheader
@@ -288,7 +304,9 @@ position: relative;
     {
         font-size: 13px;
     }
-
+    .header-pic>h1{
+        padding:150px 0 50px;
+    }
 }
 @media screen and (max-width:660px) {
 
@@ -641,13 +659,13 @@ margin-bottom: 17px;
 }
 
 .buttonCall {
-  border-radius: 3px;
+  border-radius: 5px;
   background-image: -moz-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
   background-image: -webkit-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
   background-image: -ms-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
-  box-shadow: inset 0px 0px 1px 0px rgba(255, 255, 255, 0.75);
+  box-shadow: inset 0 0 1px 0 rgba(255, 255, 255, 0.75);
   color: #FFF;
-  width: 247px;
+  width: 230px;
   height: 33px;
   font-size: 14px;
   font-family: "Open Sans";
@@ -977,6 +995,173 @@ font-weight: 700;
 }
 
 
+/********************** Listing Sort Model1 Starts *****************************************/
+/*-----------------------------------------------------------------------------------------*/
+/*-------------------- Listing Sort Model1 Content Starts --------------------------*/
+.listing-sort-m1 .lst-sort-block div[class*='col-'] {
+    padding-left: 18px;
+
+}
+.listing-sort-m1 .lst-sort-block h2 {
+    font-size: 1.3em;
+    text-transform: capitalize;
+}
+.listing-sort-m1 .lst-sort-block select {
+    width: 75%;
+}
+
+.listing-sort-m1 header.lst-sort-txt-container[class*='col-'] {
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+.listing-sort-m1 div.lst-sort-input-container[class*='col-'] {
+    padding-right: 18px;
+    padding-left: 18px;
+}
+
+.listing-sort-m1 div.lst-sort-input-container > div:nth-child(1)[class*='col-'] {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.listing-sort-m1 div.toggle-button-container[class*='col-'] {
+    padding-right: calc(7% + 22px);
+    padding-left: calc(7% + 22px);
+}
+.listing-sort-m1 a {
+    margin-left: 0;
+}
+.listing-sort-m1 div.lst-sort-input-container[class*='col-'] {
+    padding-right: 21px;
+}
+.listing-sort-m1 header.lst-sort-txt-container[class*='col-'] {
+    padding-left: 14px;
+}
+.listing-sort-m1 div.lst-sort-input-container > div[class*='col-']:nth-child(2) {
+    padding-left: 0;
+    width: 100%;
+    text-align: left;
+}
+.listing-sort-m1 div.lst-sort-input-container > div[class*='col-']:nth-child(1) {
+    padding-right: 12px;
+}
+/*-------------------- Listing Sort Model1 Content Ends --------------------------*/
+
+
+
+/*-------------------- Listing Sort Model1 Colors Start -------------------------*/
+.hvr-shadow-effect2:hover, .hvr-shadow-effect2:focus, .active.hvr-shadow-effect2
+{
+    -webkit-box-shadow: inset 0 0 0 #aeb1b5, 0 4px 8px #1e2021;
+    -moz-box-shadow:inset 0 0 0 #aeb1b5, 0 4px 8px #1e2021;
+    -ms-box-shadow: inset 0 0 0 #aeb1b5, 0 4px 8px #1e2021;
+    -o-box-shadow: inset 0 0 0 #aeb1b5, 0 4px 8px #1e2021;
+    box-shadow:inset 0 0 0 #aeb1b5, 0 4px 8px #1e2021;
+}
+.fa-align-justify
+{
+    color: #fff;
+
+}
+.btn-sort-clr
+{
+    padding: 15px 18px;
+    background-color: #020202;
+    margin-right: 0;
+    position: relative;
+    border-radius: 9px;
+    vertical-align: middle;
+}
+.fa-sort-desc{
+    color: #fff;
+    font-size: 25px !important;
+    position: absolute;
+    top: -2px;
+    right: 11px;
+}
+#lst-sort-control
+{
+    border-radius: 10px!important;
+}
+.listing-sort-m1 .lst-sort-block-bg {
+    background-color: #ebebeb;
+    border-bottom: 1px solid #000000;
+    border-top: 1px solid #000000;
+}
+.listing-sort-m1 a.btn-link-clr {
+    background-color: #d7d7d7;
+    color: #ffffff;
+    border-radius: 6px;
+}
+.listing-sort-m1 a.btn-link-clr1 {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius:6px;
+}
+.listing-sort-m1 h2 {
+    color: #000000;
+    margin: 16px 0;
+    font-weight: 700;
+}
+#listing-sort
+{
+    margin-top: 55px;
+}
+/*-------------------- Listing Sort Model1 Colors End ---------------------------*/
+
+/*-------------------- Listing Sort Model1 Media Queries Start -----------------*/
+@media (min-width:480px) {
+    .listing-sort-m1 div.lst-sort-input-container > div[class*='col-']:nth-child(2) {
+        width: auto;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .listing-sort-m1 div.lst-sort-input-container[class*='col-'] {
+        padding-right: 27px;
+    }
+
+    /* Listing Sort Model1 Library */
+    .text-left-m-d-md {
+        text-align: left;
+    }
+}
+@media (min-width: 768px) {
+    .listing-sort-m1 div.lst-sort-txt-container[class*='col-'] {
+        padding-left: 10px;
+        margin-right: 5px;
+    }
+    .listing-sort-m1 .lst-sort-block h2 {
+        font-size: 1.6em;
+        text-transform: capitalize;
+    }
+}
+@media (min-width: 992px) {
+    .listing-sort-m1 .lst-sort-block select {
+        width: 100%;
+    }
+    .listing-sort-m1 div.toggle-button-container[class*='col-'] {
+        padding-right: 22px;
+        padding-left: 18px;
+    }
+    .listing-sort-m1 div.lst-sort-input-container[class*='col-'] {
+        padding-left: 9px;
+    }
+
+    .listing-sort-m1 a {
+        margin-left: 6px;
+    }
+
+    /* Listing Sort Model1 Library */
+    .text-left-m-d-md {
+        text-align: inherit;
+    }
+}
+
+/*-------------------- Listing Sort Model1 Media Queries End -----------------*/
+/********************** Listing Sort Model1 Ends *******************************************/
+/*-----------------------------------------------------------------------------------------*/
+
 /********************** Listing Model3 Starts  **************************************/
 /*-----------------------------------------------------------------------------------*/
 /*-------------------- Listing Model3 Content Starts -----------*/
@@ -993,7 +1178,7 @@ font-weight: 700;
 }
 .staricon
 {
-    margin-left: 10px;
+    margin-right: 5px;
     padding: 6px 7px;
     margin-top: 8px;
     margin-bottom: 10px;
@@ -1123,6 +1308,7 @@ font-weight: 700;
     width: 100%;
 
 }
+
 .listing-m3 .listing-item-img-container figcaption {
     width: 100%;
     top: 0;
@@ -1657,7 +1843,11 @@ font-weight: 700;
 /********************** Pagination Model3 Ends **************************************/
 /*----------------------------------------------------------------------------------*/
 /*PAGE3 CSS START*/
-
+.page3
+{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 .page_FICHE
 {
 background-color: #fefdfd;
@@ -2278,7 +2468,7 @@ color: #000000;
 {
     width: 242px;
     height: 44px;
-    border-radius: 10px;
+    border-radius: 10px !important;
     display: inline-block;
     padding: 6px 12px;
     margin-left: 12px;
@@ -3135,6 +3325,8 @@ text-align: -webkit-center;
 .form-xlg input:not([type='checkbox']), .form-xlg select, .form-xlg .form-control {
     /*padding: 16.5px 9px;*/
     height: 50px;
+    border-top-right-radius: 30px ;
+    border-bottom-right-radius: 30px ;
 
 }
 .textarea
@@ -3149,21 +3341,23 @@ text-align: -webkit-center;
 }
 .backbtn
 {
-    border-radius: 16px;
+    border-radius: 10px;
     border: 1px solid #000000;
     background: #fff;
     color: black;
     width: 167px;
-    height: 48px;
+    height: 43px;
     line-height: 34px;
     margin-top: 20px;
     font-weight: 700;
 }
 .backbtn:hover
 {
-    background-color: #882c2f;
+    background-image: -moz-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
     color: #fff;
-    box-shadow: inset 0 0 0 #27496d, 0 4px 15px #193047;
+    box-shadow: inset 0 0 0 #27496d, 0 0 10px #193047;
 }
 /*-------------------- Form Sizing Ends ------------------------*/
 /****************** Form Wizard Model1 Starts *******************************/
@@ -3247,13 +3441,15 @@ In this case we don't need it as there are max 4 tabs */
 }
 .form-wizard-m1 .pager li>a.border-rounded,
 .pager li>span.border-rounded {
-    border-radius: 4px;
+    border-radius: 10px;
     border: none;
-    background: #000000;
+    background-image: -moz-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
     color: white;
     width: 180px;
-    height: 50px;
-    line-height: 40px;
+    height: 43px;
+    line-height: 33px;
     margin-top: 20px;
 
 }
@@ -3261,10 +3457,11 @@ In this case we don't need it as there are max 4 tabs */
 {
     background-color: #000000;
     color: #fff;
-    box-shadow: inset 0 0 0 #27496d, 0 4px 15px #193047;
+    box-shadow:inset 0 0 0 #27496d, 0 0 10px #193047;
 }
 .wizard
 {
+    clear: both;
     padding:27px;
 }
 .form-wizard-m1 .pager li>a.border-rect,
@@ -3288,8 +3485,10 @@ In this case we don't need it as there are max 4 tabs */
 .form-wizard-m1 .wizard-nav li.active .btn-info-fav-clr,
 .form-wizard-m1 .wizard-nav li.visited-step .btn-info-fav-clr {
     color: #ffffff;
-    background-color: #882c2f;
-    border: 1px solid #882c2f;
+    background-image: -moz-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
+    border: 1px solid #000000;
 
 
 }
@@ -3326,7 +3525,7 @@ In this case we don't need it as there are max 4 tabs */
     }
     .form-wizard-m1 .wizard-nav li.active:not(:first-of-type):before,
     .form-wizard-m1 .wizard-nav li.visited-step:not(:first-of-type):before {
-        background: #882c2f;
+        background: #000000;
     }
 }
 @media screen and (max-width:990px) {
@@ -3404,7 +3603,7 @@ In this case we don't need it as there are max 4 tabs */
 .form-input-group-m1 div.form-input-col3 .select2-selection--single,
 .form-input-group-m1 div.form-input-col3 .select2-container--default.select2-container--open.select2-container--below .select2-selection--single,
 .form-input-group-m1 div.form-input-col3 .select2-container--default.select2-container--open.select2-container--above .select2-selection--single {
-    border-radius:0px !important;
+    border-radius:0 ;
 }
 /*.form-input-group-m1.form-error.form-error-m1 div.form-input-col2 .form-control {*/
 /*border-left: 1px solid #cd1711;*/
@@ -3426,12 +3625,21 @@ In this case we don't need it as there are max 4 tabs */
 /*--------------------  Form Input Group Model1 Content Ends ----------*/
 
 /*--------------------  Form Input Group Model1 Media Query Starts ----------*/
+@media (max-width: 767px) {
+    .form-xlg input:not([type='checkbox']), .form-xlg select, .form-xlg .form-control {
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+    }
+}
 @media (min-width: 768px) {
     .form-input-group-m1 .form-input-addon label {
         padding: 12px;
         color: #FFFFFF;
         background-color: #a3a3a3;
         border: 1px solid #a3a3a3;
+        font-size: 11px;
+        border-bottom-left-radius: 25px;
+        border-top-left-radius: 25px;
     }
     /*override*/
     .form-xlg .form-input-group-m1 .form-input-addon label {
@@ -3443,7 +3651,7 @@ In this case we don't need it as there are max 4 tabs */
     .form-input-group-m1 div.form-input-col1 .select2-selection--single,
     .form-input-group-m1 div.form-input-col1 .select2-container--default.select2-container--open.select2-container--below .select2-selection--single,
     .form-input-group-m1 div.form-input-col1 .select2-container--default.select2-container--open.select2-container--above .select2-selection--single {
-        border-radius: 0;
+        border-radius: 0!important;
         border-left: 1px solid #c8c8c8!important;
     }
     .form-input-group-m1 div.form-input-col3 .form-control,
@@ -3694,12 +3902,18 @@ the drop down is opened above and the form tooltip  is under it */
 
 .page5
 {
-  margin-bottom: 45px;
+    margin-bottom: 45px;
+    margin-top: 45px;
 
 }
 #property-inf-submit
 {
     margin-top: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    padding-top: 32px;
+    box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
 }
 
 
@@ -3807,6 +4021,10 @@ label.browse-m2.file {
 .form-xlg .browse-m2 .file-name,
 .form-xlg .browse-m2 .file-custom-txt {
     height: 50px;
+    border:1px solid #ccc;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+
 }
 
 .form-xlg .browse-m2 .file-name-inner,
@@ -3824,16 +4042,25 @@ label.browse-m2.file {
     color: #555;
 }
 .browse-m2 .file-custom-txt  {
-    background-color: #882c2f;
+    background-image: -moz-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
     color: #ffffff;
 }
 /*--------------------  Browse Model2 Colors End ------------*/
 
 .form-border-rounded .file-custom-right .file-custom-txt {
-    border-radius: 0;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
     border: 1px solid #c8c8c8;
 }
-
+@media screen and (max-width:770px) {
+    .form-border-rounded .file-custom-right .file-custom-txt
+    {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
 @media screen and (max-width:420px) {
     .backbtn, .form-wizard-m1 .pager li>a.border-rounded, .pager li>span.border-rounded
     {
@@ -3864,7 +4091,7 @@ label.browse-m2.file {
 }
 .title-block-m1-v1.title-block-inner-clr
 {
-    border-bottom: 1px solid #882c2f;
+    border-bottom: 1px solid #000000;
     margin-bottom: 20px;
 }
 .calculator-btn
@@ -3873,7 +4100,7 @@ label.browse-m2.file {
     height:50px;
     border-radius:25px;
     color: #fff;
-    background-color: #882c2f;
+    background-color: #000000;
     line-height: 35px;
     margin-top: 12px;
     margin-bottom: 12px;
@@ -3883,7 +4110,7 @@ label.browse-m2.file {
 {
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
     color: #fff;
-    background-color:#882c2f;
+    background-color:#000000;
     border:none;
 }
 .form-border-rounded .form-control:focus
@@ -3895,27 +4122,57 @@ label.browse-m2.file {
 {
     border-radius: 0;
 }
+/*pageLOCATIV*/
+
+.locativ
+{
+    background-color: #fff;
+    border-radius: 10px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding:30px;
+}
 
 /*page7 CSS*/
 
 .page7
 {
     margin-bottom: 45px;
+    margin-top: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    padding-top: 32px;
+    box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
 }
 
 /*page8 CSS*/
 
 .page8
 {
+    margin-top: 45px;
     margin-bottom: 45px;
 }
 
-
+#legal-note
+{
+    background-color: #fff;
+    border-radius: 10px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 /*page9 CSS*/
 
 
 .page9
 {
+    margin-top: 50px;
     margin-bottom: 45px;
 }
 
