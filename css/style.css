@@ -3610,7 +3610,7 @@ In this case we don't need it as there are max 4 tabs */
 /*}*/
 /* Cols for Double Input Forms without Addons End */
 /*override*/
-.form-input-group-m1.form-error.form-error-m1 .form-error-blck {
+ .form-error-blck {
     top: 65%;
     transform: translateY(-65%);
     -moz-transform: translateY(-65%);
@@ -3755,7 +3755,7 @@ In this case we don't need it as there are max 4 tabs */
 .form-error-blck {
     display: none;
 }
-.form-error.form-error-m1 .form-error-blck {
+ .form-error-blck {
     display: inline-block;
     z-index: 170;
     position: absolute;
@@ -3873,22 +3873,26 @@ the drop down is opened above and the form tooltip  is under it */
     border-top-color: #cd1711;
     border-width: 5px 5px 0;
 }
+.form-error-blck>a
+{
+  color: red;
+}
 /*-------------------- Form Error Block Colors End ----------------*/
 
 /*-------------------- Form Error Block Media Queries Start -------*/
 @media (min-width: 480px)  and (max-width: 600px){
-    .form-error.form-error-m1 .form-error-blck.search-form-error-blck {
+  .form-error-blck.search-form-error-blck {
         right: 7%;
     }
 }
 @media (min-width: 601px)  and (max-width: 768px){
-    .form-error.form-error-m1 .form-error-blck.search-form-error-blck {
+   .form-error-blck.search-form-error-blck {
         right: 8%;
     }
 }
 
 @media (min-width: 992px) {
-    .form-error.form-error-m1 .form-error-blck.search-form-error-blck {
+    .form-error-blck.search-form-error-blck {
         right: -20px;
     }
 }
