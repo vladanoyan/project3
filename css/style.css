@@ -431,7 +431,40 @@ div.mainContainer .picturedNavbar .picturedNavbarItem:hover .title
     clear: both;
     transform: rotate(225deg);
 }
-
+@media (max-width: 1212px) {
+  
+  .title{
+    font-size: 30px;
+}
+.com_box:after
+{
+  top: 40px;
+  }
+}
+@media (max-width: 992px) {
+  
+  .title{
+    font-size: 21px;
+}
+.com_box:after
+{
+  top: 30px;
+  }
+}
+@media (max-width: 767px) {
+  
+  .title{
+    font-size: 24px;
+}
+.com_box:after
+{
+  top: 33px;
+  }
+  .enSavoir
+  {
+    padding:4px;
+  }
+}
 /*-------------------- Footer Model2 Content Starts -------------------*/
 /*--- Footer General Styles Start ---*/
 body>footer.footer-m2 {
