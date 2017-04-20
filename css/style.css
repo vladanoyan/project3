@@ -99,7 +99,7 @@ background-color: #f7f7f7;
 }
 #nav-icon3 span:nth-child(1) {
   top: 0;
-  height: 4px;
+  height: 5px;
 }
 
 #nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
@@ -187,7 +187,7 @@ font-weight: 700 !important;
   background-image: -ms-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
   border-radius: 0;
   position: fixed;
-  z-index:111;
+  z-index:9999;
   width:100%;
 
 }
@@ -229,7 +229,7 @@ font-weight: 700 !important;
     }
     .navbar-left,.navbar-right {
         float: none !important;
-    }
+        }
     .navbar-toggle {
         display: block;
     }
@@ -243,6 +243,7 @@ font-weight: 700 !important;
     }
     .navbar-collapse.collapse {
         display: none!important;
+          min-height: 388px;
     }
     .navbar-nav {
         float: none!important;
@@ -602,6 +603,7 @@ body>footer.footer-m2 {
 }
 .footer-m2 .footer-top-links-bg {
   background-color: transparent;
+  margin:0;
 }
 .footer-m2 .footer-contacts-partners-bg,
 .footer-m2 .footer-btm-links-bg,
@@ -748,6 +750,7 @@ margin-bottom: 17px;
 .page1
 {
   margin-bottom: 45px;
+    margin-top: 50px;
 }
 .Ceour
 {
@@ -852,14 +855,34 @@ font-weight: 700;
 {
   margin-top: 30px;
 }
+.inform>.row>.col-md-12
+{
+  padding: 0px
+}
+
 .inform>.row>.col-md-12>.col-md-6
 {
   padding-right: 30px;
   padding-left: 30px;
 }
+@media (max-width: 470px) {
+    .inform>.row>.col-md-12>.col-md-6,
+    .row-inner-form-page{
+       padding: 0;
+    }
+}
 .inform>.row>.col-md-12>.col-md-6>.white-list>h4
 {
   text-transform: uppercase;
+}
+@media (max-width: 400px) {
+  
+  .inform>.row>.col-md-12>.col-md-6>.white-list>h4{
+    font-size: 16px;
+}
+.Parces{
+  font-size: 13px;
+  }
 }
 /*page2 CSS*/
 
@@ -1202,8 +1225,8 @@ font-weight: 700;
 
 .star1
 {
-
-    padding: 3px;
+    font-size: 15px !important;
+    padding: 2px;
 }
 .ifac
 {
@@ -1479,7 +1502,18 @@ font-weight: 700;
     padding-right: 0;
 }
 /*--- Listing Item Parameters End ---*/
+@media (min-width: 768px) {
+    .listing-m3 .listing-item-parameters ul li{
+        display: inline-block;
 
+    }
+}
+@media (max-width: 470px) {
+   .listing-m3 .listing-item-parameters ul li{
+        display: block;
+        width: 100% !important;
+    }
+}
 /*--- List Item Left Arrow ---*/
 .listing-m3 .lst-itm-left-arrow ul li:before {
     content:'';
@@ -1520,7 +1554,7 @@ font-weight: 700;
     border:none;
     margin-top: 8px;
     vertical-align: top;
-    margin-left: 28px;
+    
 }
 .buttonCall2:hover{
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
@@ -1643,12 +1677,12 @@ font-weight: 700;
 
 }
 
-.listing-m3 .listing-item-parameters {
+.listing-m3 .listing-item-parameters ul {
     vertical-align: top;
     background-color: rgba(205, 205, 205, 0.69);
     max-height: 126px;
     border-radius: 3px;
-    width:auto;
+    width:100%;
 }
 
 .listing-m3 .lst-itm-left-arrow ul li:before {
@@ -1747,15 +1781,20 @@ font-weight: 700;
     .listing-m3 .listing-item-content {
         min-height: 370px;
     }
-}
-@media screen and (max-width:770px) {
-    .section-bg
-
-    {
-        margin-right: 0;
-        margin-left: 0;
     }
-}
+    #agency>.section-bg>.col-sm-12{
+      padding:0;
+      margin:0;
+    }
+    @media screen and (max-width:770px) {
+        .section-bg
+
+        {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+
 /*-------------------- Listing Model3 Media Queries End -------------*/
 /********************** Listing Model3 Ends  *****************************************/
 /*-----------------------------------------------------------------------------------*/
@@ -1772,6 +1811,12 @@ font-weight: 700;
     text-align: center;
     cursor: pointer;
 }
+@media (max-width: 992px) {
+    .locationicon
+ {
+        vertical-align: top;
+    }
+    }
 .iconsservise
 {
     margin-top: 5px;
@@ -1779,7 +1824,7 @@ font-weight: 700;
 }
 .locationicon img
 {
-    vertical-align: -webkit-baseline-middle;
+    padding: 4px 4px;
 }
 .locationicon:hover
 {
@@ -1804,7 +1849,7 @@ font-weight: 700;
     height: 34px;
     width: 37px;
     text-decoration: none;
-    padding: 7px 12px;
+    padding: 7px 10px;
 }
 .pagination>li:first-child,
 .pagination>li:first-child>a,
@@ -2528,6 +2573,16 @@ color: #000000;
   border-color: #c8c8c8;
   box-shadow:inset 0 1px 6px #9b9a9a, 0 0 9px #999898;
 }
+@media (max-width: 400px) {
+  
+
+  .form-control2-2,
+    .myform-control2
+
+  {
+    width: 192px;
+  }
+}
 .batserach2 {
     background-image: -moz-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
     background-image: -webkit-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
@@ -2572,7 +2627,7 @@ color: #000000;
     .myform-control2
     {
         margin-left: 0px;
-        width: auto;
+        
     }
     .batserach2
     {
@@ -2602,7 +2657,7 @@ color: #000000;
     width: 58.33333333%;
 }
 .col-c-xs-6 {
-    width: 50%;
+    width: 49%;
 }
 .col-c-xs-5 {
     width: 41.66666667%;
@@ -3166,6 +3221,7 @@ text-align: -webkit-center;
     z-index: 520;
     /*opacity: 0;*/
     width: 190px;
+    overflow: hidden;
 }
 .dpe-ges-block-m1-v1 .hover-content.pos-obs-right {
     top: 100%;
@@ -3303,8 +3359,59 @@ text-align: -webkit-center;
 }
 
 /*-------------------- DPE GES Block Model1 Version1 Media Queries End --------*/
+/*-------------------- DPE GES Block Model1 Version1 Colors End -------------*/
 
-/********************** Listing Details Slider Model2 Starts *******************************/
+
+ .dpe-block-cover.no-selected,
+ .dpe-block-cover.inprogress,
+ .ges-block-cover.no-selected,
+ .ges-block-cover.inprogress,
+ .dpe-block-cover.no-selected,
+ .dpe-block-cover.inprogress,
+ .ges-block-cover.no-selected,
+ .ges-block-cover.inprogress
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 999;
+}
+.dpe-ges-block-m1-v1 div.no-selected {
+    background: url("../images/no-dpe.png") no-repeat center rgba(245,245,245, 0.5);
+}
+.dpe-ges-block-m1-v1 div.inprogress {
+    background: url("../images/no-ges.png") no-repeat center rgba(245,245,245, 0.5);
+}
+.dpe-ges-block-m1-v1 div.no-selected {
+    background: url("../images/dpe-inprogress.png") no-repeat center rgba(245,245,245, 0.5);
+}
+.dpe-ges-block-m1-v1 div.inprogress {
+    background: url("../images/ges-inprogress.png") enter rgba(245,245,245, 0.5);
+}
+
+
+
+.dpe-ges-block-m3 .dpe-blck .hover-content div.no-selected {
+    background: url("../images/no-dpe.png") no-repeat center rgba(245,245,245, 0.5);
+}
+.dpe-ges-block-m3 .dpe-blck .hover-content div.inprogress {
+    background: url("../images/dpe-inprogress.png") no-repeat center rgba(245,245,245, 0.5);
+}
+.dpe-ges-block-m3 .ges-blck .hover-content div.no-selected {
+    background: url("../images/no-ges.png") no-repeat center rgba(245,245,245, 0.5);
+}
+.dpe-ges-block-m3 .ges-blck .hover-content div.inprogress {
+    background: url("../images/ges-inprogress.png") no-repeat center rgba(245,245,245, 0.5);
+}
+
+.dpe-ges-block-m1-v2 .ges-block .dpe-block-cover div.inprogress {
+    background: url("../images/ges-inprogress.png") no-repeat center rgba(245,245,245, 0.5);
+}
+
+.dpe-ges-block-m1-v2 .dpe-block .dpe-block-cover.inprogress {
+    background: url("../images/dpe-inprogress.png") no-repeat center rgba(245,245,245, 0.5);
+}
+
 /*-----------------------------------------------------------------------------------------*/
 
 /*page4 CSS*/
@@ -3380,7 +3487,7 @@ text-align: -webkit-center;
     color: black;
     width: 167px;
     height: 43px;
-    line-height: 34px;
+    line-height: 30px;
     margin-top: 20px;
     font-weight: 700;
 }
@@ -3662,6 +3769,9 @@ In this case we don't need it as there are max 4 tabs */
     .form-xlg input:not([type='checkbox']), .form-xlg select, .form-xlg .form-control {
         border-top-right-radius: 0 !important;
         border-bottom-right-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+        border-top-left-radius: 0 !important;
+
     }
 }
 @media (min-width: 768px) {
@@ -3812,6 +3922,8 @@ the drop down is opened above and the form tooltip  is under it */
 }
 .form-error.form-error-m1 .error-btn + .tooltip {
     z-index: 150;
+
+    
 }
 
 .form-error.form-error-m1 .form-error-blck.search-form-error-blck {
@@ -3890,16 +4002,16 @@ the drop down is opened above and the form tooltip  is under it */
 }
 
 
-.form-error.form-error-m1 .error-btn i {
+ .error-btn i {
     color: #cd1711;
 }
-.form-error.form-error-m1 .error-btn + .tooltip > .tooltip-inner {
+ .error-btn + .tooltip > .tooltip-inner {
     background-color: #cd1711;
     max-width: 250px;
     width: 500px;
     padding: 5px;
 }
-.form-error.form-error-m1 .error-btn + .tooltip.top .tooltip-arrow {
+ .error-btn + .tooltip.top .tooltip-arrow {
     bottom: 0;
     left: 50%;
     margin-left: -5px;
@@ -3910,6 +4022,7 @@ the drop down is opened above and the form tooltip  is under it */
 {
   color: red;
 }
+
 /*-------------------- Form Error Block Colors End ----------------*/
 
 /*-------------------- Form Error Block Media Queries Start -------*/
@@ -4173,6 +4286,17 @@ label.browse-m2.file {
     padding:30px;
 }
 
+@media (max-width: 660px) {
+    .locativ
+ {
+        padding:2px;
+    }
+    .section-bg h3
+    {
+      font-size: 16px;
+    }
+}
+/*----
 /*page7 CSS*/
 
 .page7
@@ -4193,7 +4317,10 @@ label.browse-m2.file {
     margin-top: 45px;
     margin-bottom: 45px;
 }
-
+.legal-notes-m1
+{
+  padding: 0;
+}
 #legal-note
 {
     background-color: #fff;
@@ -4204,6 +4331,15 @@ label.browse-m2.file {
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
+@media (max-width: 400px) {
+  #legal-note
+
+  {
+   padding: 30px 0 30px 0;
+  }
+}
+
 /*page9 CSS*/
 
 
@@ -4240,7 +4376,16 @@ label.browse-m2.file {
 .popup-contact-m2 .modal-dialog {
     margin: 60px 25px;
 }
+@media screen and (max-width:350px) {
+    .modal-dialog
+{    width:100% !important;
 
+    }
+}
+.modal
+{
+  z-index: 999999;
+}
 /* Modal Close Icon */
 .popup-contact-m2 button.modal-close {
     display: inline-block;
@@ -4399,6 +4544,12 @@ label.browse-m2.file {
     height: 80px;
     position: absolute;
     bottom: 0;
+}
+@media screen and (min-width:710px) {
+.modal-hover>ul>.col-c-xs-6
+{
+  width: 50%;
+}
 }
 
 .modal-dialog
