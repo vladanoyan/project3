@@ -36,8 +36,8 @@ body.hidden-scroll {
 .sl-wrapper .sl-close {
   display: none;
   position: fixed;
-  right: 30px;
-  top: 30px;
+  right: 40px;
+  top: 90px;
   z-index: 1015;
   margin-top: -14px;
   margin-right: -14px;
@@ -45,7 +45,7 @@ body.hidden-scroll {
   width: 44px;
   line-height: 44px;
   font-family: Arial, Baskerville, monospace;
-  color: #000;
+  color: #fff;
   font-size: 3rem;
 }
 /* line 70, ../sass/simplelightbox.scss */

@@ -190,7 +190,7 @@
 .flexslider-m3.flexslider:hover .flex-direction-nav .flex-next
 #thumbnails.flexslider-m3:hover .flex-direction-nav .flex-prev,
 #slider:hover .flex-direction-nav .flex-prev {
-	left: -1px !important;
+	left: 10px !important;
 }
 #thumbnails.flexslider-m3:hover .flex-direction-nav .flex-next,
 #thumbnails.flexslider-m3:hover .flex-direction-nav .flex-prev,

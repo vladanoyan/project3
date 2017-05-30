@@ -1,6 +1,13 @@
 
 /*Carousel Head*/
 $(document).ready(function(){
+    // modal setTimeout close function
+
+    /** Refresh Modal Window Content */
+    $(document).on('hidden.bs.modal', function (e) {
+        $(e.target).removeData('bs.modal');
+    });
+
 /*__________Tooltip Initialization Starts__________*/
 var startTooltip= function() {
     var hideAllTooltips = function() {
@@ -61,26 +68,309 @@ $(".navbar-toggle").click(function(){
 
     /*_________ Form Wizard Model1 Starts __________*/
     /* Form Validate Function */
-    var validateForm = function(tabId, sectionId) {
+    
+       var validateForm = function(tabId, sectionId, tab) {
+
+        if(tab != true){
+            tab = false;
+        }
+
         switch(sectionId)
         {
             case 'property-inf-request':
                 switch(tabId)
                 {
                     case 'tab1':
-                        return true;
-                        break;
-                    case 'tab2':
-                        return false;
-                        break;
-                    case 'tab3':
-                        return true;
+
+                        $.ajax({
+                            type: 'POST',
+                            url: "/rech_agence_code.php",
+                            data: "stepOne=1&client_nom=" + $("#client_nom").val() + "&client_prenom="+$("#client_prenom").val()+"&client_tel="+$("#client_tel").val()+"&client_email2="+$("#client_email2").val()+"&client_cp="+$("#client_cp").val()+"&client_ville="+$("#client_ville").val()+"&referer=" + $('#referer').val() + "&checkdata=" + $('#checkdata').val() + "&method="+$('#method').val(),
+                            dataType:'json',
+                            async:false,
+                            success: function (data){
+
+                                $.each(data, function (k, v) {
+                                    var input = $('[name=' + k + ']');
+                                    var parentInput = input.closest('.form-group');
+
+                                    parentInput.addClass('form-error form-error-m1');
+                                    parentInput.append('<div class="form-error-blck"> ' +
+                                        '<a href="#" title="' + v + '" data-placement="top"  class="error-btn" data-toggle="tooltip">' +
+                                        ' <i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>' +
+                                        '</div>');
+
+                                    input.change(function () {
+                                        if (input.val().length != null) {
+                                            parentInput.removeClass('form-error');
+                                        } else {
+                                            parentInput.addClass('form-error');
+                                        }
+                                    });
+                                });
+                                if(data.length == 0)
+                                    tab=true;
+                                else
+                                    tab=false;
+                            },
+
+
+                        });
+
+
+                        return tab;
                         break;
 
+                    case 'tab2':
+
+                        $.ajax({
+                            type: 'POST',
+                            url: "/rech_agence_code.php",
+                            data: "stepOne=2&TypeAnnonce=" + $("#TypeAnnonce").val() + "&TypeBien1=" + $("#TypeBien1").val() + "&Departement=" + $("#Departement").val() + "&Secteur=" + $("#Secteur").val() + "&secteur_insee=" + $("#secteur_insee").val() + "&secteur_nom=" + $("#secteur_nom").val() + "&show_name=" + $("#show_name").val() + "&client_email2=" + $("#client_email2").val() + "&client_cp=" + $("#client_cp").val() + "&client_ville=" + $("#client_ville").val() + "&referer=" + $('#referer').val() + "&checkdata=" + $('#checkdata').val() + "&method=" + $('#method').val(),
+                            dataType: 'json',
+                            async: false,
+                            success: function (data) {
+
+                                $.each(data, function (k, v) {
+                                    var input = $('[name=' + k + ']');
+                                    var parentInput = input.closest('.form-group');
+
+                                    parentInput.addClass('form-error form-error-m1');
+                                    parentInput.append('<div class="form-error-blck"> ' +
+                                        '<a href="#" title="' + v + '" data-placement="top"  class="error-btn" data-toggle="tooltip">' +
+                                        ' <i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>' +
+                                        '</div>');
+
+                                    input.change(function () {
+                                        if (input.val().length != null) {
+                                            parentInput.removeClass('form-error');
+                                        } else {
+                                            parentInput.addClass('form-error');
+                                        }
+                                    });
+                                });
+                                if (data.length == 0)
+                                    tab = true;
+                                else
+                                    tab = false;
+                            },
+
+                        });
+
+                        return tab;
+                        break;
+
+
+                    case 'tab3':
+
+                        $.ajax({
+                            type: 'POST',
+                            url: "/rech_agence_code.php",
+                            data: "stepOne=3",
+                            dataType:'json',
+                            async:false,
+                            success: function (data){
+
+                                $.each(data, function (k, v) {
+                                    var input = $('[name=' + k + ']');
+                                    var parentInput = input.closest('.form-group');
+
+                                    parentInput.addClass('form-error form-error-m1');
+                                    parentInput.append('<div class="form-error-blck"> ' +
+                                        '<a href="#" title="' + v + '" data-placement="top"  class="error-btn" data-toggle="tooltip">' +
+                                        ' <i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>' +
+                                        '</div>');
+
+                                    input.change(function () {
+                                        if (input.val().length != null) {
+                                            parentInput.removeClass('form-error');
+                                        } else {
+                                            parentInput.addClass('form-error');
+                                        }
+                                    });
+                                });
+                                if(data.length == 0)
+                                    tab=true;
+                                else
+                                    tab=true;
+                            },
+
+                        });
+                        return tab;
+                        break;
+                }
+
+            case 'property-inf-submit':
+                switch(tabId)
+                {
+                    case 'tab1':
+
+                        $.ajax({
+                            type: 'POST',
+                            url: "/nvannonce_agence_code.php",
+                            data: "stepOne=1&client_nom=" + $("#client_nom").val() + "&client_prenom="+$("#client_prenom").val()+"&client_tel1="+$("#client_tel1").val()+"&client_email="+$("#client_email").val()+"&client_cp="+$("#client_cp").val()+"&client_ville="+$("#client_ville").val()+"&fiche_secteur_id=" + $('#fiche_secteur_id').val() + "&fiche_departement_id="+$("#fiche_departement_id").val()+"&checkdata=" + $('#checkdata').val() + "&method="+$('#method').val(),
+                            dataType:'json',
+                            async:false,
+                            success: function (data){
+
+                                $.each(data, function (k, v) {
+                                    var input = $('[name=' + k + ']');
+                                    var parentInput = input.closest('.form-group');
+
+                                    parentInput.addClass('form-error form-error-m1');
+                                    parentInput.append('<div class="form-error-blck"> ' +
+                                        '<a href="#" title="' + v + '" data-placement="top"  class="error-btn" data-toggle="tooltip">' +
+                                        ' <i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>' +
+                                        '</div>');
+
+                                    input.change(function () {
+                                        if (input.val().length != null) {
+                                            parentInput.removeClass('form-error');
+                                        } else {
+                                            parentInput.addClass('form-error');
+                                        }
+                                    });
+                                });
+                                if(data.length == 0)
+                                    tab=true;
+                                else
+                                    tab=false;
+                            },
+
+                        });
+                        return tab;
+                        break;
+                    case 'tab2':
+
+                        $.ajax({
+                            type: 'POST',
+                            url: "/nvannonce_agence_code.php",
+                            data: "stepOne=2&fiche_bien_id=" + $("#fiche_bien_id").val() + "&fiche_cp="+$("#fiche_cp").val()+"&fiche_type_id="+$("#fiche_type_id").val()+"&Departement="+$("#Departement").val()+"&Secteur="+$("#Secteur").val()+"&secteur_insee="+$("#secteur_insee").val()+"&secteur_nom="+$("#secteur_nom").val()+"&show_name="+$("#show_name").val()+"&client_email2="+$("#client_email2").val()+"&client_cp="+$("#client_cp").val()+"&client_ville="+$("#client_ville").val()+"&referer=" + $('#referer').val() + "&checkdata=" + $('#checkdata').val() + "&method="+$('#method').val(),
+                            dataType:'json',
+                            async:false,
+                            success: function (data){
+
+                                $.each(data, function (k, v) {
+                                    var input = $('[name=' + k + ']');
+                                    var parentInput = input.closest('.form-group');
+
+                                    parentInput.addClass('form-error form-error-m1');
+                                    parentInput.append('<div class="form-error-blck"> ' +
+                                        '<a href="#" title="' + v + '" data-placement="top"  class="error-btn" data-toggle="tooltip">' +
+                                        ' <i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>' +
+                                        '</div>');
+
+                                    input.change(function () {
+                                        if (input.val().length != null) {
+                                            parentInput.removeClass('form-error');
+                                        } else {
+                                            parentInput.addClass('form-error');
+                                        }
+                                    });
+                                });
+                                if(data.length == 0)
+                                    tab=true;
+                                else
+                                    tab=false;
+                            },
+
+                        });
+
+                        return tab;
+                        break;
+                    case 'tab3':
+                        tab = true;
+                        return tab;
+                        break;
+                }
+            case 'contact':
+
+                switch(tabId)
+                {
+
+                    case 'tab1':
+
+                        $.ajax({
+                            type: 'POST',
+                            url: "/contacter_agence_code.php",
+                            data: "stepOne=1&form_client_nom=" + $("#form_client_nom").val() + "&form_client_prenom="+$("#form_client_prenom").val()+"&form_client_tel1="+$("#form_client_tel1").val()+"&form_client_email="+$("#form_client_email").val()+"&form_client_cp="+$("#form_client_cp").val()+"&form_client_ville="+$("#form_client_ville").val()+"&checkdata=" + $('#checkdata').val(),
+                            dataType:'json',
+                            async:false,
+                            success: function (data){
+
+                                $.each(data, function (k, v) {
+                                    var input = $('[name=' + k + ']');
+                                    var parentInput = input.closest('.form-group');
+
+                                    parentInput.addClass('form-error form-error-m1');
+                                    parentInput.append('<div class="form-error-blck"> ' +
+                                        '<a href="#" title="' + v + '" data-placement="top"  class="error-btn" data-toggle="tooltip">' +
+                                        ' <i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>' +
+                                        '</div>');
+
+                                    input.change(function () {
+                                        if (input.val().length != null) {
+                                            parentInput.removeClass('form-error');
+                                        } else {
+                                            parentInput.addClass('form-error');
+                                        }
+                                    });
+                                });
+                                if(data.length == 0)
+                                    tab=true;
+                                else
+                                    tab=false;
+                            },
+
+                        });
+                        return tab;
+                        break;
+                    case 'tab2':
+
+                        $.ajax({
+                            type: 'POST',
+                            url: "/contacter_agence_code.php",
+                            data: "stepOne=2&checkdata=" + $('#checkdata').val(),
+                            dataType:'json',
+                            async:false,
+                            success: function (data){
+                                $.each(data, function (k, v) {
+                                    var input = $('[name=' + k + ']');
+                                    var parentInput = input.closest('.form-group');
+
+                                    parentInput.addClass('form-error form-error-m1');
+                                    parentInput.append('<div class="form-error-blck"> ' +
+                                        '<a href="#" title="' + v + '" data-placement="top"  class="error-btn" data-toggle="tooltip">' +
+                                        ' <i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>' +
+                                        '</div>');
+
+                                    input.change(function () {
+                                        if (input.val().length != null) {
+                                            parentInput.removeClass('form-error');
+                                        } else {
+                                            parentInput.addClass('form-error');
+                                        }
+                                    });
+                                });
+                                if(data.length == 0)
+                                    tab=true;
+                                else
+                                    tab=false;
+                            },
+
+                        });
+
+                        return tab;
+                        break;
+                    case 'tab3':
+                        tab = true;
+                        return tab;
+                        break;
                 }
         }
         return true;
     }
+
 
     /* Navigate to Tab Function */
     var navigateToTab = function(tabEl) {
@@ -225,9 +515,14 @@ $('#nav-icon3').click(function(){
     });
 /*chenge btn text*/
 
-        $('.SeeMore2').click(function(){
-        $('#equipment').toggleClass('flashOn flash')
+     
+    $("#show").hide();
+    $(".SeeMore2").click(function(){
+        $("#hide").toggle();
+        $("#show").toggle();
+
     });
+
 
    /*__________Listing Model3 Functions Start_________*/
 /* Match Item heights for Listing Item */

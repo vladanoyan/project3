@@ -19,8 +19,8 @@ ul li{
   src: url('../fonts/OpenSans/OpenSans-Semibold.woff');
   font-weight:700;
 }
-@font-face
-{
+
+@font-face{
   font-family:"Open Sans Light";
   src:url("../fonts/OpenSans/OpenSans-Light.woff") format("woff");
   font-weight:300;
@@ -179,6 +179,7 @@ font-weight: 700 !important;
 .dropdown-menu
 {
   padding:0 0;
+  overflow: hidden;
 }
 .navbar-inverse
 {
@@ -208,10 +209,10 @@ font-weight: 700 !important;
 {font-size:12px ;
 }
 }
-@media screen and (max-width:1206px) {
+@media screen and (max-width:1095px) {
     .navbar-inverse .navbar-nav>li>a
 
-    {font-size:12px ;
+    {font-size:10px ;
     }
 }
  
@@ -313,12 +314,6 @@ position: relative;
 }
 @media screen and (max-width:660px) {
 
-    .listing-m3 .listing-item-parameters ul
-    {
-        columns: 1;
-        display: block;
-        text-align: center;
-    }
     .logo{
         height: 35px;
     }
@@ -482,6 +477,10 @@ body>footer.footer-m2 {
 .marg-right5 {
     margin-right: 10px;
 }
+span#elem_foot_link a{
+        font-size: 14px;
+        color:#333;
+    }
 /*--- Footer General Styles End ---*/
 
 /*--- Footer Top Links Start ---*/
@@ -940,7 +939,7 @@ font-weight: 700;
 }
 .multiselect
 {
-    width: 190px !important;
+    width: 190px ;
     height: 36px !important;
     border-radius: 11px !important;
     display: inline-block!important;
@@ -950,6 +949,15 @@ font-weight: 700;
     margin-top: 10px !important;
     padding: 5px;
 }
+  @media(max-width:483px ) {
+    .multiselect {
+        width: 250px !important;
+    }
+    }
+.multiselect-container>li{
+  text-align: left;
+}
+
 .myform-control:focus
 {
     border-color: #c8c8c8;
@@ -971,28 +979,36 @@ font-weight: 700;
     margin-bottom: 13px;
     border-radius: 5px;
 }
-.SeeMore2
-{
+@media (max-width: 456px) {
+.batserach{
+  display: block;
+}
+}
+.SeeMore2 {
+    background-color: #b4b4b4;
+    color: #fff;
     float: right;
-}
-.flash
-{
-    background-image: url("../images/criteria-btn.png");
     width: 130px;
-    height: 27px;
-    background-size: cover;
-    background-repeat: no-repeat;
+    height: 30px;
+    overflow: hidden;
+    border:1px solid #6f6f6f;
+    line-height: 0px;
 }
-
-.flashOn
-{
-    background-image: url("../images/change2.png");
-    width: 130px;
-    height: 27px;
-    background-size: cover;
-    background-repeat: no-repeat;
+.SeeMore2>p>.fa{
+    font-size:16px;
+    vertical-align: middle;
 }
-
+.SeeMore2>p{
+    padding: 7px 0;
+    font-size: 12px;
+    margin: 0;
+}
+#show{
+    color: #fff;
+    background-image: -moz-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
+}
 .checkbox label:after{
     content: '';
     display: table;
@@ -1134,6 +1150,14 @@ font-weight: 700;
     font-size: 25px !important;
     position: absolute;
     top: -2px;
+    right: 11px;
+}
+.fa-sort-asc
+{
+    color: #fff;
+    font-size: 25px !important;
+    position: absolute;
+    top: 8px;
     right: 11px;
 }
 #lst-sort-control
@@ -1484,10 +1508,8 @@ font-weight: 700;
 /*--- Listing Item Parameters Start ---*/
 .listing-m3 .listing-item-parameters ul {
     margin: 0;
-    display: inline-table;
     width: 100%;
     padding-top: 5px;
-    padding-bottom: 5px;
     text-align: start;
 
 }
@@ -1638,13 +1660,29 @@ font-weight: 700;
 
 .provence {
     margin-top: 0;
-    font-size: 24px;
+    font-size: 20px;
     color: black;
     text-align: -webkit-left;
     font-family: "Open Sans Light";
     padding-top: 0;
     margin-bottom: 3px;
 }
+@media (max-width: 1200px) {
+.provence{
+  font-size: 17px;
+}
+
+}
+@media (max-width: 766px) {
+.lst-img-caption-btm-btns>h2{
+  font-size: 19px;
+}
+.provence,.listing-m3 .listing-item-category,.listing-m3 .listing-item-reference p{
+    margin: 0;
+    text-align: center;
+}
+}
+
 
 .listing-m3 .listing-item-category {
     color: #737373;
@@ -1682,9 +1720,10 @@ font-weight: 700;
 .listing-m3 .listing-item-parameters ul {
     vertical-align: top;
     background-color: rgba(205, 205, 205, 0.69);
-    max-height: 126px;
+    max-height: 82px;
     border-radius: 3px;
     width:100%;
+    overflow-y: auto;
 }
 
 .listing-m3 .lst-itm-left-arrow ul li:before {
@@ -1804,13 +1843,14 @@ font-weight: 700;
 .locationicon
 {
     display: inline-block;
-    width: 34px;
-    height: 34px;
+    width: 34px!important;
+    height: 34px !important;
     background-color: #969696;
     border: 1px solid #aaaaaa;
     border-radius: 3px;
     text-align: center;
     cursor: pointer;
+    margin-bottom: 7px;
 }
 @media (max-width: 992px) {
     .locationicon
@@ -1839,18 +1879,16 @@ font-weight: 700;
     display: inline-block;
     margin: 10px 0 5px 0;
 }
-.pagination-m3 ul.pagination li {
-    display: inline;
-    /*display: inline-block;*/
-    /*margin-left: -0.125em;*/
-    /*margin-right: -0.125em;*/
-}
+
 .pagination-m3 ul.pagination li a {
     display: inline-block;
     height: 34px;
     width: 37px;
     text-decoration: none;
     padding: 7px 10px;
+     color: black;
+    border-radius: 8px;
+    margin-left: 8px;
 }
 .pagination>li:first-child,
 .pagination>li:first-child>a,
@@ -1880,6 +1918,7 @@ font-weight: 700;
 }
 .pagination-m3 ul.pagination li {
     background-color: #fefefe ;
+    display: inline;
 }
 .no-touchevents .pagination-m3 ul.pagination li:hover,
 .pagination-m3 ul.pagination li:focus,
@@ -1897,11 +1936,8 @@ font-weight: 700;
     color: #FFF;
 
 }
-.pagination-m3 ul.pagination li a {
-    color: black;
-    border-radius: 8px;
-    margin-left: 8px;
-}
+
+
 .pagination-m3 ul.pagination li a:hover
 {
     background-color: #969696;
@@ -1934,6 +1970,11 @@ border-radius: 16px;
 box-shadow: 0 0 19px rgba(0, 0, 0, 0.3);
 padding-top: 22px;
 padding-bottom: 7px;
+}
+@media (max-width: 771px){
+  .page_FICHE{
+    padding: 20px 0;
+  }
 }
 .fa-arrows-alt
 {
@@ -2050,6 +2091,7 @@ margin-right: 10px;
     position: absolute;
     top:0;
     left:20px;
+    z-index: 5;
 }
 /*--- Listing Details Header Starts ---*/
 .listing-details-m1 .lst-itm-dtl-header p,
@@ -2210,11 +2252,11 @@ color: #000000;
 }
 
 
-.listing-details-m1 .form-block input,
+/*.listing-details-m1 .form-block input,
 .listing-details-m1 .form-block select,
 .listing-details-m1 .form-block textarea {
   width: 100%;
-}
+}*/
 
 .listing-details-m1 .form-block textarea {
   height: 170px;
@@ -2359,13 +2401,33 @@ color: #000000;
   .listing-details-m1 .lst-itm-dtl-header .lst-itm-dtl-header-txt1 {
     font-size: 1.38em;
     margin-top: 5px;
+        width: 72%;
   }
   .listing-details-m1 .lst-itm-dtl-header h2 {
     font-size: 2.15em;
   }
   .listing-details-m1 .lst-itm-dtl-header h3 {
     font-size: 2.15em;
+        width: 70%;
   }
+  .lst-img-caption-btm-btns>h2{
+  font-size: 20px;
+  font-weight: 600;
+  display: inline-block;
+}
+.listing-item-price-color{
+  font-size: 15px;
+  display: inline-block!important;
+
+}
+@media (max-width: 1200px) {
+.lst-img-caption-btm-btns>h2{
+  font-size: 19px;
+}
+}
+.listing-item-price-color::first-letter {
+  text-transform: uppercase !important;
+}
   /* Listing Details Header Ends */
   
   /* Listing Details Description */
@@ -2491,7 +2553,7 @@ color: #000000;
     content: "\f105";
     color :#000;
     position: absolute;
-    left: 50%;
+    left: 0;
     top: 50%;
     transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
@@ -3599,6 +3661,7 @@ In this case we don't need it as there are max 4 tabs */
     background-color: #000000;
     color: #fff;
     box-shadow:inset 0 0 0 #27496d, 0 0 10px #193047;
+    border: 1px solid #fff;
 }
 .wizard
 {
@@ -3781,14 +3844,26 @@ In this case we don't need it as there are max 4 tabs */
         color: #FFFFFF;
         background-color: #a3a3a3;
         border: 1px solid #a3a3a3;
-        font-size: 11px;
         border-bottom-left-radius: 25px;
         border-top-left-radius: 25px;
     }
-    /*override*/
+    .form-input-group-m1 .form-input-addon label{
+      font-size: 11px;
+
+    }
     .form-xlg .form-input-group-m1 .form-input-addon label {
         height: 50px;
     }
+  }
+    @media (max-width: 1200px) {
+       .form-input-group-m1 .form-input-addon label{
+      font-size: 9px;
+
+    }
+
+  }
+    /*override*/
+    
 
     .form-input-group-m1 div.form-input-col1 .form-control,
     .form-input-group-m1 div.form-input-col1 .custom-multiselect-btn,
@@ -3911,6 +3986,15 @@ In this case we don't need it as there are max 4 tabs */
     -o-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
 }
+.BLCK2{
+  position: relative;
+ display: block;
+}
+.BLCK2>.form-error-blck{
+  top: 59%!important;
+    left: 224px!important;
+}
+
 /* This is for fixing form error icon positioning problem when
 the drop down is opened above and the form tooltip  is under it */
 .form-error.form-error-m1 .form-error-blck.form-error-blck-pos-fix {
@@ -4072,10 +4156,17 @@ the drop down is opened above and the form tooltip  is under it */
 /********************* Browse Model2 Starts **********************************/
 /*---------------------------------------------------------------------------*/
 /*--------------------  Browse Model2 Content Starts ----------*/
+.file-hide{
+    position: relative;
+    right: 102px;
+    border: none;
+    outline: none;
+}
 label.browse-m2.file {
     margin-bottom: 0;
     width: 100%;
     text-align: left;
+    overflow:hidden;
 }
 .browse-m2 .file-custom {
     text-align: left;
@@ -4172,11 +4263,7 @@ label.browse-m2.file {
 .form-xlg .browse-m2 .file-name,
 .form-xlg .browse-m2 .file-custom-txt {
     height: 50px;
-    border:1px solid #ccc;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-
-}
+ }
 
 .form-xlg .browse-m2 .file-name-inner,
 .form-xlg .browse-m2 .file-custom-txt {
@@ -4191,6 +4278,9 @@ label.browse-m2.file {
 .browse-m2 .file-custom {
     background-color: #fff;
     color: #555;
+    border: 1px solid #ccc;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 .browse-m2 .file-custom-txt  {
     background-image: -moz-linear-gradient( 90deg, rgb(0,0,0) 0%, rgb(62,62,62) 100%);
@@ -4217,8 +4307,8 @@ label.browse-m2.file {
     {
         width:155px !important;
     }
-    .form-wizard-m1 .tab-content {
-      padding: 0 !important;
+    .form-wizard-m1 .tab-content,.property-inf-submit-m2-v1 {
+      padding:10px 0 !important;
     }
 }
 
@@ -4382,6 +4472,10 @@ label.browse-m2.file {
 }
 
 
+.modal-body{
+  text-align: center;
+}
+
 .modal
 {
   z-index: 999999;
@@ -4543,16 +4637,17 @@ label.browse-m2.file {
 {
     background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
-    height: 80px;
     position: absolute;
     bottom: 0;
+    display: flex;
+    justify-content: center;
+    height: 90px;
+    align-items: center;
+    overflow-y: auto;
+
 }
-@media screen and (min-width:710px) {
-.modal-hover>ul>.col-c-xs-6
-{
-  width: 50%;
-}
-}
+
+
 
 .modal-dialog
     {
@@ -4568,20 +4663,32 @@ label.browse-m2.file {
     width:100%;
     }
   }
+
 .modal-header-lst
 {
+    height: 60px;
     color: #fff;
-    column-count: 3;
-    width: 100%;
-    padding: 19px 6px;
     font-size: 13px;
+    margin: 0 auto;
+    width: 100%;
 }
-.modal-header-lst  li
+.modal-header-lst li {
+    display: inline-flex;
+    justify-content: center;
+}
+@media (max-width: 575px){
+  .modal-header-lst  li
 {
-    display: inline-block;
-    text-align: justify;
+  text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.modal-hover{
+  height: 60px !important;
 }
 
+}
 .modal-content
 {
 
@@ -4599,21 +4706,14 @@ label.browse-m2.file {
     font-weight: 300;
     z-index:999;
 }
-@media screen and (max-width:1030px) {
-    .modal-header-lst
-    {
-        column-count: 2;
-        padding-top: 10px;
 
-    }
-}
 @media screen and (max-width:710px) {
     .modal-header-lst
     {
        font-size: 11px;
-        display: inline-table;
     }
 
+}
 
 .modal-footer
 {
@@ -4626,7 +4726,6 @@ label.browse-m2.file {
 .finish-btn>a{
     width:100% !important;
 }
-
 
 
 
