@@ -539,7 +539,7 @@ var matchHeightLstItm=function(){
         $('.listing-item-img').css('height','auto');
 };
 
-/*__________Listing Details Gallery Starts ________*/
+/*__________Listing Details Gallery Starts________*/
 /* Lightbox Gallery */
 $(function(){
     if($('.listing-dtl-gallery').length)
@@ -552,13 +552,16 @@ $(function(){
         })
 
         var galCustomStyleForNav=function(){
-            var imgWidth = $('.sl-image').width();
-            var windowWidth = window.innerWidth;
-            var marg=(windowWidth-imgWidth)/2;
-            $('.sl-prev').css('left', marg);
-            $('.sl-next').css('right', marg);
-            $('.sl-prev').css('visibility', 'visible');
-            $('.sl-next').css('visibility', 'visible');
+           setTimeout(function () {
+                var imgWidth = $('.sl-image').width();
+                var windowWidth = window.innerWidth;
+                var marg=(windowWidth-imgWidth)/2;
+                $('.sl-prev').css('left', marg);
+                $('.sl-next').css('right', marg);
+                $('.sl-prev').css('visibility', 'visible');
+                $('.sl-next').css('visibility', 'visible');
+
+            }, 1000);
         };
 
         $('.listing-dtl-gallery .gal-class').on('shown.simplelightbox', function () {
@@ -573,7 +576,7 @@ $(function(){
 
     }
 });
-/*__________Listing Details Gallery Ends ________*/
+/*__________Listing Details Gallery Ends________*/
 
 
 
